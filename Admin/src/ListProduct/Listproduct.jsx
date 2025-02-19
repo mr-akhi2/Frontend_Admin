@@ -22,7 +22,7 @@ const Listproduct = () => {
 
   const removeproduct = async (id) => {
     // console.log(id);
-    await fetch("http://localhost:6060/removeproduct", {
+    await fetch("https://frontend-admin-33ir.onrender.com/removeproduct", {
       method: "DELETE",
       headers: {
         Accept: "application/json",

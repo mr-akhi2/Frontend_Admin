@@ -36,10 +36,13 @@ const AddProduct = () => {
     formData.append("product", image);
 
     try {
-      const uploadResponse = await fetch("http://localhost:6060/upload", {
-        method: "POST",
-        body: formData,
-      });
+      const uploadResponse = await fetch(
+        "https://frontend-admin-33ir.onrender.com/upload",
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
 
       responseData = await uploadResponse.json();
       console.log(responseData);
@@ -64,7 +67,7 @@ const AddProduct = () => {
         ); // 10 sec timeout
 
         const productResponse = await fetch(
-          "http://localhost:6060/addproduct",
+          "https://frontend-admin-33ir.onrender.com/addproduct",
           {
             method: "POST",
             headers: {
