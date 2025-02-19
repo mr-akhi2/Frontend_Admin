@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>File Upload</title>
+  </head>
+
+  <body>
+    <input type="file" id="snd" />
+    <button onclick="send()">Send</button>
+    <img id="preview" style="display: none; width: 200px; margin-top: 10px" />
+
+    <script>
+      function send() {
+        let fileInput = document.getElementById("snd");
+        let file = fileInput.files[0];
+
+        if (!file) {
+          alert("Please select a file first.");
+          return;
+        }
+
+        let formData = new FormData();
+        formData.append("product", file); // Match backend field name
+
+        fetch("http://localhost:6060/upload", {
+          method: "POST",
+          body: formData,
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log("Success:", data);
+            alert("File uploaded successfully!");
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+            alert("File upload failed!");
+          });
+      }
+    </script>
+  </body>
+</html>

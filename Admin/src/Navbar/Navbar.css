@@ -1,0 +1,116 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 60px;
+  box-shadow: 0px 1px 3px -2px black;
+  margin-bottom: 1px;
+}
+.nav_logo_container {
+  height: 100%;
+}
+.nav_logo {
+  width: 100px;
+  border-radius: 50%;
+  user-select: none;
+}
+.nav_profile {
+  width: 70px;
+  border-radius: 50%;
+  z-index: 1000;
+}
+
+.login-btn {
+  padding: 20px 40px;
+  border-radius: 50px;
+  outline: none;
+  border: none;
+  background: rgba(81, 81, 238, 0.897);
+  color: white;
+  font-size: 16px;
+}
+
+.profile-dashboard {
+  background: #fff;
+  width: 250px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  position: absolute;
+  top: 80px;
+  right: 10px;
+  z-index: 100;
+  display: none;
+}
+
+h3 {
+  margin-top: 10px;
+  font-size: 22px;
+  color: #333;
+}
+
+.email {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.profile-options {
+  list-style: none;
+  padding: 0;
+}
+
+.profile-options li {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.profile-options li a {
+  text-decoration: none;
+  color: #764ba2;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.profile-options li a:hover {
+  color: #44337a;
+}
+
+.logout-btn {
+  display: inline-block;
+  background: #e74c3c;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  transition: background 0.3s ease;
+}
+
+.logout-btn:hover {
+  background: #c0392b;
+}
+
+@media (max-width: 800px) {
+  .navbar {
+    padding: 15px 30px;
+  }
+  .nav-log {
+    width: 150px;
+  }
+  .nav-profile {
+    width: 60px;
+  }
+  .profile-dashboard {
+    top: 90px;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile-dashboard {
+    width: 100%;
+    top: 150px;
+  }
+}
