@@ -6,7 +6,7 @@ const Listproduct = () => {
   const [allproducts, setallproducts] = useState([]);
 
   const fetchinfo = async () => {
-    await fetch("http://localhost:6060/allproducts")
+    await fetch("https://frontend-admin-33ir.onrender.com/allproducts")
       .then((res) => {
         return res.json();
       })
